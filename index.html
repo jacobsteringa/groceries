@@ -9,10 +9,6 @@
   </head>
   <body>
     <div id="app" class="panel">
-      <div class="form">
-        <input type="text" placeholder="New item" v-on:change="addItem">
-      </div>
-
       <div class="list">
         <div class="item" v-for="item in items">
           <div class="description" v-bind:class="{ 'checked': item.checked }">{{ item.description }}</div>
@@ -22,6 +18,10 @@
             <button class="delete" v-on:click="deleteItem(item.id)">[ x ]</button>
           </div>
         </div>
+      </div>
+
+      <div class="form">
+        <input type="text" placeholder="New item" v-on:change="addItem">
       </div>
     </div>
 

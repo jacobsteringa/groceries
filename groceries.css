@@ -19,15 +19,20 @@ body {
 }
 
 .form {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 input[type=text] {
-  border: 1px solid #bbb;
-  box-shadow: inset 0 1px 4px #ddd;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  padding: 8px;
+  padding: 8px 0 2px;
   width: 100%;
+}
+
+input[type=text]:focus {
+  outline: none;
 }
 
 button {
@@ -47,14 +52,9 @@ button.delete {
 }
 
 .list .item {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #ddd;
   display: flex;
-  padding: 8px 0;
-}
-
-.list .item:last-of-type {
-  border-bottom: none;
-  padding: 8px 0 0;
+  padding: 8px 0 2px;
 }
 
 .item .description {
