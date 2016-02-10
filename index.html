@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+    <title>Groceries, a dead simple grocery list!</title>
+
+    <link rel="stylesheet" href="/groceries.css" charset="utf-8">
+  </head>
+  <body>
+    <div id="app" class="panel">
+      <div class="form">
+        <input type="text" placeholder="New item" v-on:change="addItem">
+      </div>
+
+      <div class="list">
+        <div class="item" v-for="item in items">
+          <div class="description" v-bind:class="{ 'checked': item.checked }">{{ item.description }}</div>
+
+          <div class="actions">
+            <button class="check" v-on:click="checkItem(item.id)" v-if="item.checked === false">[ v ]</button>
+            <button class="delete" v-on:click="deleteItem(item.id)">[ x ]</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script>
+    <script src="/groceries.js"></script>
+  </body>
+</html>

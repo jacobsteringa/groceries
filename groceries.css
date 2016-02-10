@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+html, {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.panel {
+  box-shadow: 0 1px 4px #bbb;
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 16px;
+}
+
+.form {
+  margin-bottom: 16px;
+}
+
+input[type=text] {
+  border: 1px solid #bbb;
+  box-shadow: inset 0 1px 4px #ddd;
+  font-size: 1rem;
+  padding: 8px;
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+}
+
+button.check {
+  color: green;
+}
+
+button.delete {
+  color: red;
+}
+
+.list .item {
+  border-bottom: 1px solid #bbb;
+  display: flex;
+  padding: 8px 0;
+}
+
+.list .item:last-of-type {
+  border-bottom: none;
+  padding: 8px 0 0;
+}
+
+.item .description {
+  flex: 1;
+}
+
+.item .description.checked {
+  color: #bbb;
+  text-decoration: line-through;
+}
+
+.item .actions {
+  text-align: right;
+  width: 100px;
+}
